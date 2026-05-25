@@ -370,4 +370,4 @@ npm run prisma:seed
 
 ## Final Notes
 
-The app is seeded with demo products, warehouses, and stock rows. After environment variables are configured and the database is seeded, the full flow can be tested directly from the deployed URL.
+The app is seeded with demo products, warehouses, and stock rows. After environment variables are configured and the database is seeded, the full flow can be tested directly from the deployed URL
