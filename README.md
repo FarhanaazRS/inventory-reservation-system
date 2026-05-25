@@ -4,6 +4,8 @@ This is a Next.js inventory reservation system built for the Allo Engineering ta
 
 The app is designed around correctness for short-lived stock reservations, including atomic reservation creation and safe confirm/release behavior.
 
+https://inventory-reservation-system-rimwsa1mp-farhanaazrs-projects.vercel.app
+
 ---
 
 ## Tech Stack
