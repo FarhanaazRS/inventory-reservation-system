@@ -80,10 +80,10 @@ Reservation creation uses a PostgreSQL transaction with an atomic conditional up
 
 ```sql
 UPDATE "Stock"
-SET "reservedUnits" = "reservedUnits" + quantity
+SET "reserved" = "reserved" + quantity
 WHERE "productId" = productId
   AND "warehouseId" = warehouseId
-  AND ("totalUnits" - "reservedUnits") >= quantity
+  AND ("total" - "reserved") >= quantity
 RETURNING id;
 ```
 

@@ -68,10 +68,10 @@ export async function POST(req: NextRequest) {
     const reservation = await prisma.$transaction(async (tx) => {
       const updatedStock = await tx.$queryRaw<{ id: string }[]>`
         UPDATE "Stock"
-        SET "reservedUnits" = "reservedUnits" + ${quantity}
+        SET "reserved" = "reserved" + ${quantity}
         WHERE "productId" = ${productId}
           AND "warehouseId" = ${warehouseId}
-          AND ("totalUnits" - "reservedUnits") >= ${quantity}
+          AND ("total" - "reserved") >= ${quantity}
         RETURNING id
       `;
 
